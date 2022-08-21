@@ -3,13 +3,13 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AuthModule } from './auth/auth.module';
 import { UserModule } from './user/user.module';
 import { DatabaseModule } from "./database/database.module"
-import { User } from './typeorm/entities/User';
-import { Profile } from './typeorm/entities/Profile';
+import { User } from './utils/typeorm/entities/User';
+import { Profile } from './utils/typeorm/entities/Profile';
 import { ProfileController } from './profile/controllers/profile.controller';
 import { ProfileService } from './profile/services/profile.service';
 import { ProfileModule } from './profile/profile.module';
 import { PostModule } from './post/post.module';
-import { Post } from './typeorm/entities/Post';
+import { Post } from './utils/typeorm/entities/Post';
 
 @Module({
 	imports: [AuthModule, UserModule, ProfileModule, PostModule, TypeOrmModule.forRoot({

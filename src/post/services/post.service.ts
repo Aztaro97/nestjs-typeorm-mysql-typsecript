@@ -1,8 +1,8 @@
 import { Injectable, HttpException, HttpStatus } from '@nestjs/common';
 import { InjectRepository } from "@nestjs/typeorm"
 import { postDetailsProps } from 'src/interfaces/Post';
-import { Post } from 'src/typeorm/entities/Post';
-import { User } from 'src/typeorm/entities/User';
+import { Post } from 'src/utils/typeorm/entities/Post';
+import { User } from 'src/utils/typeorm/entities/User';
 import { Repository } from "typeorm"
 
 @Injectable()
