@@ -1,5 +1,13 @@
+import { IsString, IsNumber } from "class-validator"
+
 export class CreateProfileDto {
-	firstName: string
-	lastName: string
+
+	@IsString()
+	firstName: string;
+
+	@IsString()
+	lastName: string;
+
+	@IsNumber()
 	age: Number
 }

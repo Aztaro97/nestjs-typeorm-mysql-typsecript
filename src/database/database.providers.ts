@@ -1,5 +1,6 @@
 import { User } from 'src/utils/typeorm/entities/User';
 import { DataSource } from 'typeorm';
+import { join } from "path"
 
 export const databaseProviders = [
 	{
@@ -12,7 +13,7 @@ export const databaseProviders = [
 				username: 'root',
 				password: 'root',
 				database: 'test',
-				entities: [User],
+				entities: [join(__dirname, "**", ".entity.{ts,js}")],
 				synchronize: true,
 			});
 
